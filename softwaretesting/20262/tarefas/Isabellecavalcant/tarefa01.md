@@ -52,3 +52,7 @@ O [teste de integração](https://github.com/HelenaMariano2025/projetoPNLD/blob/
 A [execução da CI](https://github.com/HelenaMariano2025/projetoPNLD/actions/runs/36082296848) apresentou **15 testes, 58 assertions e 1 notificação do PHPUnit**. A cobertura dos arquivos configurados no PHPUnit foi de **92,71% das linhas (89/96)**; para `LivroRepository`, **100% das linhas (47/47)**. O relatório Clover `coverage.xml` está no artefato `coverage-report` dessa execução.
 
 O [workflow do GitHub Actions](https://github.com/HelenaMariano2025/projetoPNLD/blob/task/3/.github/workflows/testes.yml) instala as dependências, prepara o MySQL, executa os testes, calcula a cobertura e publica o relatório.
+
+### Comando e saída da suíte de testes
+
+Na CI, foi executado `php vendor/phpunit/phpunit/phpunit tests --coverage-text --coverage-clover coverage.xml`. A saída registrou `15 / 15 (100%)` e `Tests: 15, Assertions: 58, PHPUnit Notices: 1`. O comando também gerou o relatório `coverage.xml`.
