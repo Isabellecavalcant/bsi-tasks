@@ -38,3 +38,17 @@ Como referência prática, consultei o projeto [PHP CRUD Users API](https://gith
 Um *mock object* é um objeto criado para substituir uma dependência durante um teste e verificar como o código interage com ela. No PHPUnit, `createMock()` permite configurar respostas e expectativas sobre chamadas de métodos. Por exemplo, em um teste de unidade do cadastro de livros, podemos simular `mysqli` e `mysqli_stmt` e verificar se a operação chama `prepare()` e `execute()` como esperado, sem acessar um banco real. Para verificar a gravação no MySQL, fazemos separadamente um teste de integração.
 
 - [Manual do PHPUnit: Test Doubles](https://docs.phpunit.de/en/12.5/test-doubles.html)
+
+## 10. CRUD de livros, testes, cobertura e CI
+
+Usei o CRUD de livros do [projeto PNLD](https://github.com/HelenaMariano2025/projetoPNLD). O [LivroRepository](https://github.com/HelenaMariano2025/projetoPNLD/blob/task/3/php/LivroRepository.php) implementa inserção, consulta, atualização e exclusão lógica. Na exclusão, o livro passa para `inativo`, preservando o histórico de empréstimos.
+
+Como referência para CRUD em PHP com testes, consultei o [PHP CRUD Users API](https://github.com/jonsanchezr/php-crud-users-api), que reúne operações CRUD, MySQL, Composer e testes. O projeto PNLD usa sua própria implementação.
+
+Os [testes de unidade](https://github.com/HelenaMariano2025/projetoPNLD/blob/task/3/tests/LivroRepositoryTest.php) usam mocks de `mysqli` e `mysqli_stmt` para testar cada operação isoladamente. Separar o acesso ao banco das páginas PHP facilitou a implementação: **4 testes e 29 assertions passaram**.
+
+O [teste de integração](https://github.com/HelenaMariano2025/projetoPNLD/blob/task/3/tests/LivroRepositoryIntegrationTest.php) executa as quatro operações com MySQL real e desfaz os dados criados ao terminar: **1 teste e 9 assertions passaram**. Diferentemente do teste de unidade, ele verifica a interação real entre o código e o banco.
+
+A [execução da CI](https://github.com/HelenaMariano2025/projetoPNLD/actions/runs/36082296848) apresentou **15 testes, 58 assertions e 1 notificação do PHPUnit**. A cobertura dos arquivos configurados no PHPUnit foi de **92,71% das linhas (89/96)**; para `LivroRepository`, **100% das linhas (47/47)**. O relatório Clover `coverage.xml` está no artefato `coverage-report` dessa execução.
+
+O [workflow do GitHub Actions](https://github.com/HelenaMariano2025/projetoPNLD/blob/task/3/.github/workflows/testes.yml) instala as dependências, prepara o MySQL, executa os testes, calcula a cobertura e publica o relatório.
