@@ -1,4 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f360e39-3c98-4599-9e52-d50f31de1535" /># Teste de Software 2026.2
 
 Neste diretório temos as orientações, links de enunciados e registros de entregas das tarefas individuais e projetos de grupo da turma 2026.2.
 
