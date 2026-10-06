@@ -1,4 +1,4 @@
-# Teste de Software 2026.2
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f360e39-3c98-4599-9e52-d50f31de1535" /># Teste de Software 2026.2
 
 Neste diretório temos as orientações, links de enunciados e registros de entregas das tarefas individuais e projetos de grupo da turma 2026.2.
 
@@ -61,12 +61,17 @@ Jaine Souza (`@JaineSouz`).
 
 **Tecnologias:** PHP, MySQL, MySQLi, HTML, CSS, JavaScript, jQuery e Bootstrap.
 
-  * Link Repositório: <https://github.com/HelenaMariano2025/projetoPNLD>
-  * Link Documento de Visão:
-  * Link Relatório do Estado Atual dos Testes:
+  * Link Repositório: https://github.com/HelenaMariano2025/projetoPNLD
+  * Link Documento de Visão: https://github.com/HelenaMariano2025/projetoPNLD/blob/main/docs/001-documento-visao.md
+  * Link Lista de User Stories: https://github.com/HelenaMariano2025/projetoPNLD/blob/main/docs/004-lista-users-stories.md
+  * Link Plano de Iterações Geral: https://github.com/HelenaMariano2025/projetoPNLD/blob/main/plano-iteracoes-geral.md
+  * Link Relatório do Estado Atual dos Testes: https://github.com/HelenaMariano2025/projetoPNLD/blob/main/docs/relatorio-estado-atual-testes.md
+  * Link Plano da Iteração 1: https://github.com/HelenaMariano2025/projetoPNLD/blob/main/docs/plano-iteracao-1.md
+  * Link Entrega P1 (issue): https://github.com/tacianosilva/bsi-tasks/issues/481
   * Link Plano de Teste Geral (PTG):
   * Link Plano de Teste das Iterações 1 e 2 (PTI):
-  * Link SonarQube LABENS: <https://labens.dct.ufrn.br/sonarqube/>
+  * Link SonarQube LABENS: https://labens.dct.ufrn.br/sonarqube/
+
 
 ### G2 — IA Voz
 
